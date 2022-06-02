@@ -1,5 +1,7 @@
 MechaCarChallenge
 
+Deliverable 1
+
 #Use the library function to load dplyr package
 
 library(dplyr)
@@ -15,3 +17,25 @@ lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AW
 #Use the summary() function to determine the p-value and r-squared value for the linear regression model
 
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mechacar_mpg)) # determind the p-value and r-squared value in linear regression
+
+Deliverable 2
+
+#Read the Suspension_Coil.csv file as a table
+
+metrics_table <- read.csv('Suspension_Coil.csv',check.names = F,stringsAsFactors = F)
+
+# Write an RScript that creates a total_summary df using the summarize() function for all PSI metrics
+
+total_summary <- summarize(metrics_table, 
+                           mean(PSI),
+                           median(PSI),
+                           var(PSI),
+                           sd(PSI)
+                           )
+# Write an RScript that creates a lot_summary df using group_by() and the summarize() functions.
+
+lot_summary <- metrics_table %>% group_by(Manufacturing_Lot) %>% summarize(mean=mean(PSI),
+                                  median=median(PSI),
+                                  var=var(PSI),
+                                  sd=sd(PSI), .groups = 'keep')
+
