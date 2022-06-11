@@ -4,10 +4,11 @@
 
 ## Linear Regression to Predict MPG
 
-write a short summary using a screenshot of the output from the linear regression, and address the 
-following questions:
+write a short summary using a screenshot of the output from the linear regression, 
+and address the following questions:
 
-Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+Which variables/coefficients provided a non-random amount of variance to the mpg 
+values in the dataset?
 
 Is the slope of the linear model considered to be zero? Why or why not?
 

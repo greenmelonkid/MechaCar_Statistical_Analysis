@@ -39,3 +39,6 @@ lot_summary <- metrics_table %>% group_by(Manufacturing_Lot) %>% summarize(mean=
                                   var=var(PSI),
                                   sd=sd(PSI), .groups = 'keep')
 
+
+Deliverable 3
+ 
