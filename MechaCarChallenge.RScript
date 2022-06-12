@@ -41,12 +41,13 @@ lot_summary <- metrics_table %>% group_by(Manufacturing_Lot) %>% summarize(mean=
 
 Deliverable 3
 
+# Write a RScript for a t-test that compares all lots against the mean PSI of the population
+
 t.test(metrics_table$PSI, mu=1500)
+
+# Write a RScript for three t-tests that compare each manufacturing lot against the mean PSI of the population
 
 t.test(subset(metrics_table, Manufacturing_Lot=='Lot1')$PSI, mu=1500)
 t.test(subset(metrics_table, Manufacturing_Lot=='Lot2')$PSI, mu=1500)
 t.test(subset(metrics_table, Manufacturing_Lot=='Lot3')$PSI, mu=1500)
-
-
-Deliverable 4
  
