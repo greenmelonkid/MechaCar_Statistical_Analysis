@@ -6,15 +6,14 @@ Deliverable 1
 library(dplyr)
 
 #Import MechaCar_mpg csv file
-mechacar_mpg <- read.csv('MechaCar_mpg.csv',check.names = F,stringsAsFactors = F) #import the MechaCar_mpg csv file
+mechacar_mpg <- read.csv('MechaCar_mpg.csv',check.names = F,stringsAsFactors = F) 
 
 #Perform linear regression using the lm() function
-lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mechacar_mpg) # create linear model
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mechacar_mpg)
 
 #Use the summary() function to determine the p-value and r-squared value for the linear regression model
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mechacar_mpg)) 
 
-# determine the p-value and r-squared value in linear regression
 
 
 
@@ -38,7 +37,7 @@ lot_summary <- metrics_table %>% group_by(Manufacturing_Lot) %>% summarize(mean=
                                   median=median(PSI),
                                   var=var(PSI),
                                   sd=sd(PSI), .groups = 'keep')
-
+ 
 
 Deliverable 3
  
